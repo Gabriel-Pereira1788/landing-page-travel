@@ -1,0 +1,51 @@
+@import "_variables.scss";
+@import "GlobalClass.scss";
+
+.container-divs {
+	padding: 20px;
+	margin-top: 10%;
+	background-color: #100d0d;
+	width:100%;
+	@include Flexcenter(space-between, column, center);
+	.container-trip-planer {
+		@include Transitions(opacity, 1s);
+		margin-top: 50px;
+		color: white;
+		width:100%;
+		.planer-info {
+			@include Flexcenter(space-evenly, row, flex-start);
+			width: 100%;
+			height: 18em;
+			div {
+				width: 20em;
+				padding: 0px 23px;
+				h2 {
+					font-size: clamp(1em, 2.5vh, 3em);
+					text-align: justify;
+					margin-bottom: 20px;
+				}
+			}
+
+			p {
+				width: 36%;
+			}
+		}
+		.carrossel-imgs {
+			width: 100%;
+			overflow: hidden;
+			.container-imgs {
+				@include Flexcenter(space-evenly, row, center);
+				width: 100%;
+				.img-travel {
+					margin:10px;
+					width: 300px;
+					height: 400px;
+					background-color: white;
+				}
+				#img-7{
+					transform: translateX(100%);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@import "./animations.scss";
+
+@mixin Flexcenter($content, $direction, $align) {
+	//Funções com scss
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $content;
+	align-items: $align;
+}
+
+@mixin Transforms($translate) {
+	transform: $translate;
+}
+
+@mixin Transitions($element, $time) {
+	transition: $element $time;
+}
+
+.hidden-off {
+	animation-name: slide;
+	animation-duration: 1s;
+}
+.btn {
+	cursor: pointer;
+	padding: 10px;
+	background-color: $primaryColor;
+	color: white;
+	margin-top: 10px;
+}

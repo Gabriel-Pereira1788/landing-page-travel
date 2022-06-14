@@ -1,0 +1,48 @@
+
+ @import 'headerSection.scss';
+ @import 'SectionAboutUs.scss';
+@import 'containerDivs.scss';
+@import '_variables.scss';
+*{
+	padding: 0;
+	border:0;
+	margin: 0;
+	box-sizing:border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+body{
+	min-height:100vh;
+	background-color:black;
+}
+
+.container-main{
+	@include Flexcenter(space-evenly, column, center) ;
+	height:100%;
+	section{
+		margin-top:10%;
+	}
+	
+}
+.hidden-section{
+	opacity:0;
+}
+a{
+	text-transform: capitalize;
+	text-decoration: none;
+	font-size: clamp(0.5em, 1.5vw, 1em);
+	}
+ul{
+	list-style: none;
+}
+h1,h2,h3,a{
+	font-family: 'Poppins', sans-serif;
+}
+p{
+	line-height: 21px;
+	text-align: justify;
+	font-size:clamp(0.5em,2vw,1em);
+			color: #b5b5b5;
+			font-weight:200;
+}
