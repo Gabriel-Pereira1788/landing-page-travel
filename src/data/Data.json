@@ -1,0 +1,52 @@
+[
+	{
+		"name": "Grand Canyon",
+		"seasons": "Summer",
+		"src": "../src/images/imagesTravel/GrandCanyon.jpg"
+	},
+	{
+		"name": "Gulmarg",
+		"seasons": "Winter",
+		"src": "../src/images/imagesTravel/Gulmarg.jpg"
+	},
+	{
+		"name": "Fernando Noronha",
+		"seasons": "Summer",
+		"src": "../src/images/imagesTravel/FernandoNoronha.jpg"
+	},
+	{
+		"name": "Las Vegas Tour",
+		"seasons": "Winter",
+		"src": "../src/images/imagesTravel/img-1.jpg"
+	},
+	{
+		"name": "Playa Del Carmen",
+		"seasons": "Summer",
+		"src": "../src/images/imagesTravel/PlayaDelCarmen.jpg"
+	},
+	{
+		"name": "Canada Banf National Park ",
+		"seasons": "Winter",
+		"src": "../src/images/imagesTravel/BanfNationalPark.jpeg"
+	},
+	{
+		"name": "Playa Del Carmen",
+		"seasons": "Summer",
+		"src": "../src/images/imagesTravel/PlayaDelCarmen.jpg"
+	},
+	{
+		"name": "Canada Banf National Park ",
+		"seasons": "Winter",
+		"src": "../src/images/imagesTravel/BanfNationalPark.jpeg"
+	},
+	{
+		"name": "Rome italy ",
+		"seasons": "Summer",
+		"src": "../src/images/imagesTravel/RomeItaly.jpg"
+	},
+	{
+		"name": "Brazil Gramado",
+		"seasons": "Winter",
+		"src": "../src/images/imagesTravel/timthumb.jpeg"
+	}
+]
