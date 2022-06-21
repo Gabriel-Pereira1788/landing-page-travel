@@ -1,0 +1,42 @@
+@import "_variables.scss";
+@import "GlobalClass.scss";
+@import "animations.scss";
+
+.container-categories {
+	padding: 15px;
+	@include Flexcenter(normal, column, flex-start);
+	width: 100%;
+	.info-section {
+		@include Flexcenter(space-between, column, flex-start);
+		margin-left: 5%;
+		width: 40%;
+		height: 300px;
+		h2 {
+			font-size: clamp(1em, 2.5vh, 3em);
+			color: white;
+		}
+	}
+	.container-imgs-categories {
+		width: 100%;
+		@include Flexcenter(space-evenly, row, flex-end);
+
+		div {
+			max-width: 1150px;
+			width:100%;
+			margin:10px;
+			position:relative;
+			img {
+				object-fit: cover;
+				height: 28rem;
+				margin:10px;
+				width: 100%;
+
+			}
+
+		}
+		#img-2{
+				top:250px;
+			}
+			
+	}
+}

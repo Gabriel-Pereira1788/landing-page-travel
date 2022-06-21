@@ -1,5 +1,5 @@
-import elements from '../App.js'
-const {containerTitle,containerSocialMedias} = elements
+import elements from "../App.js";
+const { containerTitle, containerSocialMedias } = elements;
 const headerSection = document.querySelector(".header-section");
 const header = headerSection.querySelector("header");
 const mainHeader = headerSection.querySelector("main");
@@ -32,20 +32,27 @@ const scrolledClick = (e) => {
 	});
 };
 
+const elementsAnimations = {
+	aboutUs: (element) => element.querySelector("img").classList.add("translateAnimationX"),
+	carousel:(element) => element.classList.add("translateAnimationY"),
+};
+
 const loadContent = (entries) => {
 	Array.from(entries).forEach((entrie) => {
-			if (entrie.intersectionRatio >= 0.5) {
-				entrie.target.classList.remove("hidden-section");
-				entrie.target.classList.add("hidden-off");
-				if (entrie.target.id === "aboutUs") {
-					const img = entrie.target.querySelector("img");
-					img.classList.add("translateAnimationX");
-				}
-			}
-		});
-}
+		const element = entrie.target;
+		if (entrie.intersectionRatio >= 0.5) {
+			element.classList.remove("hidden-section");
+			element.classList.add("hidden-off");
+			elementsAnimations[element.id]
+				? elementsAnimations[element.id](element)
+				: false;
+		}
+	});
+};
 
-const observer = new IntersectionObserver(loadContent,{threshold: [0, 0.5, 1],});
+const observer = new IntersectionObserver(loadContent, {
+	threshold: [0, 0.5, 1],
+});
 
 Array.from(document.querySelectorAll(".container")).forEach((element) =>
 	observer.observe(element)

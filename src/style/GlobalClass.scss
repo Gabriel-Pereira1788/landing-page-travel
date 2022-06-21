@@ -7,7 +7,11 @@
 	justify-content: $content;
 	align-items: $align;
 }
-
+@mixin setWidth($max,$percentage,$min){
+	max-width:$max;
+	width:$percentage;
+	min-width:$min;
+}
 @mixin Transforms($translate) {
 	transform: $translate;
 }

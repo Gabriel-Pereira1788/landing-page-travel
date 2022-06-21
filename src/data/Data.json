@@ -1,52 +1,55 @@
-[
-	{
-		"name": "Grand Canyon",
-		"seasons": "Summer",
-		"src": "../src/images/imagesTravel/GrandCanyon.jpg"
-	},
-	{
-		"name": "Gulmarg",
-		"seasons": "Winter",
-		"src": "../src/images/imagesTravel/Gulmarg.jpg"
-	},
-	{
-		"name": "Fernando Noronha",
-		"seasons": "Summer",
-		"src": "../src/images/imagesTravel/FernandoNoronha.jpg"
-	},
-	{
-		"name": "Las Vegas Tour",
-		"seasons": "Winter",
-		"src": "../src/images/imagesTravel/img-1.jpg"
-	},
-	{
-		"name": "Playa Del Carmen",
-		"seasons": "Summer",
-		"src": "../src/images/imagesTravel/PlayaDelCarmen.jpg"
-	},
-	{
-		"name": "Canada Banf National Park ",
-		"seasons": "Winter",
-		"src": "../src/images/imagesTravel/BanfNationalPark.jpeg"
-	},
-	{
-		"name": "Playa Del Carmen",
-		"seasons": "Summer",
-		"src": "../src/images/imagesTravel/PlayaDelCarmen.jpg"
-	},
-	{
-		"name": "Canada Banf National Park ",
-		"seasons": "Winter",
-		"src": "../src/images/imagesTravel/BanfNationalPark.jpeg"
-	},
-	{
-		"name": "Rome italy ",
-		"seasons": "Summer",
-		"src": "../src/images/imagesTravel/RomeItaly.jpg"
-	},
-	{
-		"name": "Brazil Gramado",
-		"seasons": "Winter",
-		"src": "../src/images/imagesTravel/timthumb.jpeg"
-	}
-]
+{
+	
+	"imagesTravel": [
+		{
+			"name": "Grand Canyon",
+			"seasons": "Summer",
+			"src": "../src/images/imagesTravel/GrandCanyon.jpg"
+		},
+		{
+			"name": "Gulmarg",
+			"seasons": "Winter",
+			"src": "../src/images/imagesTravel/Gulmarg.jpg"
+		},
+		{
+			"name": "Fernando Noronha",
+			"seasons": "Summer",
+			"src": "../src/images/imagesTravel/FernandoNoronha.jpg"
+		},
+		{
+			"name": "Las Vegas Tour",
+			"seasons": "Winter",
+			"src": "../src/images/imagesTravel/lasVegas.jpg"
+		},
+		{
+			"name": "Playa Del Carmen",
+			"seasons": "Summer",
+			"src": "../src/images/imagesTravel/PlayaDelCarmen.jpg"
+		},
+		{
+			"name": "Canada Banf National Park ",
+			"seasons": "Winter",
+			"src": "../src/images/imagesTravel/BanfNationalPark.jpeg"
+		},
+		{
+			"name": "Rome italy ",
+			"seasons": "Summer",
+			"src": "../src/images/imagesTravel/RomeItaly.jpg"
+		},
+		{
+			"name": "Brazil Gramado",
+			"seasons": "Winter",
+			"src": "../src/images/imagesTravel/Gramado.jpeg"
+		},
+		{
+			"name": "Peru",
+			"seasons": "Autumn",
+			"src": "https://img.theculturetrip.com/1440x/smart/wp-content/uploads/2020/09/g5jrt6.jpg"
+		},
+		{
+			"name": "Maldivas",
+			"seasons": "Summer",
+			"src": "https://dsdsuzy1jtjfw.cloudfront.net/wp-content/uploads/2021/06/Ilha-de-Olhuveli-Maldivas-shutterstock_1383503633.jpg"
+		}
+	]
+}

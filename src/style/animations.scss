@@ -8,15 +8,28 @@
 }
 
 .translateAnimationX{
-	animation-name: translate;
+	animation-name: translate-X;
 	animation-duration: 2s;
 }
+.translateAnimationY{
+	animation-name: translate-Y;
+	animation-duration:1s;
+}
 
-@keyframes translate{
+
+@keyframes translate-X{
 	from{
 		transform:translateX(-100%);
 	}
 	to{
 		transform:translateX(0%);
+	}
+}
+@keyframes translate-Y{
+	from{
+		transform:translateY(100%);
+	}
+	to{
+		transform:translateY(0%);
 	}
 }

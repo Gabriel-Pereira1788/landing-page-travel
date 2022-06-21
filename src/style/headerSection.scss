@@ -23,7 +23,7 @@
 		@include Flexcenter(space-evenly, row, center);
 		width: 100%;
 		transition: 0.5s;
-		z-index: 1;
+		z-index: 2;
 	}
 
 	nav {
@@ -53,14 +53,32 @@
 	main {
 		@include Flexcenter(flex-start, row, center);
 		color: white;
-		background-image: linear-gradient(to top, #000000, #000000b8, #00000000);
+		background-image: linear-gradient(
+			to top,
+			#000000,
+			#000000b8,
+			#00000000
+		);
 		width: 100%;
 		height: 100%;
-		
-			.social-medias {
+
+		.social-medias {
 			@include Flexcenter(space-evenly, column, center);
-		
+
 			margin: 15px;
+			div {
+				.displayBigger {
+					display: none;
+				}
+				@media screen and(min-width:$bigger) {
+					.displayBigger {
+						display: block;
+					}
+					.displayNormal {
+						display: none;
+					}
+				}
+			}
 			i {
 				cursor: pointer;
 				color: white;
@@ -72,11 +90,10 @@
 			}
 		}
 
-		
 		.container-headers {
 			@include Flexcenter(space-evenly, column, flex-start);
-			@include Transitions(opacity,1s);
-			
+			@include Transitions(opacity, 1s);
+
 			width: 47%;
 			height: 50%;
 			margin: 30px;
@@ -91,13 +108,17 @@
 				padding: 10px;
 				background-color: $primaryColor;
 				color: white;
+				@media screen and (min-width: $bigger) {
+					padding: 20px;
+					font-size: 2em;
+				}
 			}
 			@media screen and(max-width:$small) {
-				
-				width:100%;
-				
+				width: 100%;
 			}
 		}
 	}
-
+	@media screen and (min-width: $bigger) {
+		height: 1200px;
+	}
 }
