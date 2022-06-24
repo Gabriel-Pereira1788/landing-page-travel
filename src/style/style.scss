@@ -3,7 +3,7 @@
 @import "containerDivs.scss";
 @import "_variables.scss";
 @import "containerCategories.scss";
-
+@import "contactUsSection.scss";
 * {
 	padding: 0;
 	border: 0;
@@ -60,6 +60,9 @@ p {
 	line-height: 30px;
 	text-align: justify;
 	font-size: clamp(0.8em, 2vw, 1.3em);
-	color: #b5b5b5;
+	color: $SecondaryTextColor;
 	font-weight: 200;
+}
+img{
+	border-radius:5px;
 }

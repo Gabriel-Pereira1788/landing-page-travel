@@ -21,6 +21,16 @@
     transform: translateY(100%); }
   to {
     transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
 .hidden-off {
   animation-name: slide;
   animation-duration: 1s; }
@@ -55,6 +65,16 @@
     transform: translateY(100%); }
   to {
     transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
 .header-section {
   display: flex;
   flex-direction: column;
@@ -68,36 +88,97 @@
     background-color: white;
     color: black;
     position: fixed; }
-  .header-section .headerScrolled > nav ul li a {
+    .header-section .headerScrolled .menu-icon {
+      color: black; }
+  .header-section .headerScrolled .container-navigation nav ul li a {
     color: black; }
   .header-section header {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
     transition: 0.5s;
     z-index: 2; }
-  .header-section nav {
-    width: 70%;
+    .header-section header .btn-menu {
+      background: none;
+      display: none;
+      cursor: pointer; }
+    .header-section header .logo {
+      width: 200px;
+      display: flex; }
+      .header-section header .logo img {
+        height: 2rem;
+        width: 100%;
+        object-fit: cover; }
+    @media screen and (max-width: 450px) {
+      .header-section header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; }
+        .header-section header .btn-menu {
+          display: block; }
+        .header-section header .menu-icon {
+          position: absolute;
+          margin: 10px 33px; }
+          .header-section header .menu-icon:hover {
+            color: green; }
+        .header-section header .exit-menu {
+          color: red;
+          margin: 25px; }
+        .header-section header .logo {
+          text-align: center;
+          margin: 10px 33px;
+          width: 100%;
+          padding: 0px 50px; } }
+  .header-section .navigation-off {
+    transform: translateX(0%); }
+    @media screen and (max-width: 450px) {
+      .header-section .navigation-off {
+        transform: translateX(-100%); } }
+  .header-section .container-navigation {
+    width: 65%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center; }
-    .header-section nav ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s; }
+    .header-section .container-navigation nav {
       width: 100%; }
-    .header-section nav ul > li {
-      padding: 20px 0px;
-      border: 3px solid #fff0; }
-      .header-section nav ul > li:hover {
-        transition: 0.3s;
-        border-top-color: green; }
-      .header-section nav ul > li a {
-        color: white; }
+      .header-section .container-navigation nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%; }
+      .header-section .container-navigation nav ul > li {
+        padding: 20px 0px;
+        border: 3px solid #fff0; }
+        .header-section .container-navigation nav ul > li:hover {
+          transition: 0.3s;
+          border-top-color: green; }
+        .header-section .container-navigation nav ul > li a {
+          color: white; }
+    @media screen and (max-width: 450px) {
+      .header-section .container-navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: white;
+        left: 0;
+        top: 0;
+        min-height: 100vh; }
+        .header-section .container-navigation nav ul {
+          margin: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start; }
+        .header-section .container-navigation nav ul > li a {
+          color: black; } }
   .header-section hr {
     border: 1px solid #f7f7f7a3;
     width: 85%;
@@ -191,6 +272,16 @@
     transform: translateY(100%); }
   to {
     transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
   .about-us .hidden-off {
     animation-name: slide;
     animation-duration: 1s; }
@@ -221,6 +312,16 @@
     transform: translateY(100%); }
   to {
     transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
   .about-us .container-img {
     max-width: 450px;
     min-width: 300px; }
@@ -276,6 +377,16 @@
     transform: translateY(100%); }
   to {
     transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
 .hidden-off {
   animation-name: slide;
   animation-duration: 1s; }
@@ -310,6 +421,16 @@
     transform: translateY(100%); }
   to {
     transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
 .container-divs {
   margin-top: 10%;
   background-color: #100d0d;
@@ -340,6 +461,16 @@
           margin-bottom: 20px; }
       .container-divs .container-trip-planer .planer-info p {
         width: 36%; }
+      @media screen and (max-width: 600px) {
+        .container-divs .container-trip-planer .planer-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: 20em; }
+          .container-divs .container-trip-planer .planer-info p {
+            width: 100%;
+            padding: 0px 23px; } }
     .container-divs .container-trip-planer .carousel-imgs {
       width: 100%;
       overflow: hidden; }
@@ -353,6 +484,7 @@
         overflow-x: hidden;
         scroll-behavior: smooth; }
         .container-divs .container-trip-planer .carousel-imgs .container-imgs .img-travel {
+          border-radius: 5px;
           position: relative;
           margin: 10px;
           min-width: 290px;
@@ -398,7 +530,7 @@
         .container-divs .container-trip-planer .carousel-imgs .container-imgs #img-1 {
           left: 0%; }
   .container-divs .container-blog {
-    margin-top: 5%;
+    margin-top: 50px;
     width: 100%;
     padding: 0px 15px;
     display: flex;
@@ -530,6 +662,16 @@
     transform: translateY(100%); }
   to {
     transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
 .hidden-off {
   animation-name: slide;
   animation-duration: 1s; }
@@ -564,6 +706,16 @@
     transform: translateY(100%); }
   to {
     transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
 .container-categories {
   padding: 15px;
   display: flex;
@@ -594,12 +746,172 @@
       margin: 10px;
       position: relative; }
       .container-categories .container-imgs-categories div img {
+        position: relative;
+        border-radius: 5px;
         object-fit: cover;
-        height: 28rem;
+        height: 36rem;
         margin: 10px;
-        width: 100%; }
-    .container-categories .container-imgs-categories #img-2 {
+        width: 100%;
+        transition: all 0.3s; }
+        @media screen and (min-width: 1500px) {
+          .container-categories .container-imgs-categories div img {
+            height: 63rem;
+            width: 95%; } }
+      .container-categories .container-imgs-categories div .image-top {
+        animation: movingToTop 2s ease-in-out alternate infinite; }
+      .container-categories .container-imgs-categories div .image-bottom {
+        animation: movingToBottom 2s ease-in-out alternate infinite; }
+    .container-categories .container-imgs-categories #container-moving {
       top: 250px; }
+
+@keyframes slide {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.translateAnimationX {
+  animation-name: translate-X;
+  animation-duration: 2s; }
+
+.translateAnimationY {
+  animation-name: translate-Y;
+  animation-duration: 1s; }
+
+@keyframes translate-X {
+  from {
+    transform: translateX(-100%); }
+  to {
+    transform: translateX(0%); } }
+@keyframes translate-Y {
+  from {
+    transform: translateY(100%); }
+  to {
+    transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
+.hidden-off {
+  animation-name: slide;
+  animation-duration: 1s; }
+
+.btn {
+  cursor: pointer;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  margin-top: 10px; }
+
+@keyframes slide {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.translateAnimationX {
+  animation-name: translate-X;
+  animation-duration: 2s; }
+
+.translateAnimationY {
+  animation-name: translate-Y;
+  animation-duration: 1s; }
+
+@keyframes translate-X {
+  from {
+    transform: translateX(-100%); }
+  to {
+    transform: translateX(0%); } }
+@keyframes translate-Y {
+  from {
+    transform: translateY(100%); }
+  to {
+    transform: translateY(0%); } }
+@keyframes movingToTop {
+  from {
+    top: 0px; }
+  to {
+    top: 10px; } }
+@keyframes movingToBottom {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 10px; } }
+#contact {
+  background-image: url("../images/pexels-pixabay-39691.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  #contact main {
+    background-image: linear-gradient(to bottom, #000000, #000000, #0000007a);
+    width: 100%;
+    height: 100%; }
+    #contact main .say-hello {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 300px;
+      text-align: center; }
+      #contact main .say-hello h2 {
+        font-size: clamp(1em, 2.5vw, 2em); }
+      #contact main .say-hello div input {
+        outline: none;
+        background: none;
+        color: white; }
+      #contact main .say-hello div hr {
+        border: 1px solid green; }
+    #contact main .container-links {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      margin: 30px 0px; }
+      #contact main .container-links .info-enterprise {
+        width: 30%; }
+        #contact main .container-links .info-enterprise p {
+          margin: 10px 0px; }
+          #contact main .container-links .info-enterprise p span {
+            color: green; }
+      #contact main .container-links .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        #contact main .container-links .links li {
+          margin: 10px 0px;
+          text-align: center; }
+        #contact main .container-links .links a {
+          color: #b5b5b5; }
+      @media screen and (max-width: 600px) {
+        #contact main .container-links {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          #contact main .container-links .info-enterprise {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%; }
+          #contact main .container-links .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px; } }
 
 * {
   padding: 0;
@@ -660,5 +972,8 @@ p {
   font-size: clamp(0.8em, 2vw, 1.3em);
   color: #b5b5b5;
   font-weight: 200; }
+
+img {
+  border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */

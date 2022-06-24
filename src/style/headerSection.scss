@@ -15,36 +15,103 @@
 		background-color: white;
 		color: black;
 		position: fixed;
+		.menu-icon {
+			color: black;
+		}
 	}
-	.headerScrolled > nav ul li a {
+	.headerScrolled .container-navigation nav ul li a {
 		color: black;
 	}
 	header {
-		@include Flexcenter(space-evenly, row, center);
+		@include Flexcenter(space-evenly, row-reverse, center);
 		width: 100%;
 		transition: 0.5s;
 		z-index: 2;
+		.btn-menu {
+			background: none;
+			display: none;
+			cursor: pointer;
+		}
+		.logo {
+			width: 200px;
+			display: flex;
+			img {
+				height: 2rem;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		@media screen and (max-width: $extraSmall) {
+			@include Flexcenter(space-between, row, center);
+			.btn-menu {
+				display: block;
+			}
+			.menu-icon {
+				position: absolute;
+				margin: 10px 33px;
+				&:hover {
+					color: $primaryColor;
+				}
+			}
+			.exit-menu {
+				color: red;
+				margin: 25px;
+			}
+
+			.logo {
+				text-align: center;
+				margin: 10px 33px;
+				width: 100%;
+				padding:0px 50px;
+			}
+		}
+	}
+	.navigation-off {
+		transform: translateX(0%);
+		@media screen and(max-width:$extraSmall){
+		transform: translateX(-100%);
+		}
 	}
 
-	nav {
-		width: 70%;
-		@include Flexcenter(space-between, row, center);
-		ul {
-			@include Flexcenter(space-evenly, row, center);
+	.container-navigation {
+		width: 65%;
+		@include Flexcenter(center, row, center);
+		@include Transitions(all, 1s);
+		nav {
 			width: 100%;
-		}
-		ul > li {
-			padding: 20px 0px;
-			border: 3px solid #fff0;
-			&:hover {
-				transition: 0.3s;
-				border-top-color: $primaryColor;
+			ul {
+				@include Flexcenter(space-evenly, row, center);
+				width: 100%;
 			}
-			a {
-				color: white;
+			ul > li {
+				padding: 20px 0px;
+				border: 3px solid #fff0;
+				&:hover {
+					transition: 0.3s;
+					border-top-color: $primaryColor;
+				}
+				a {
+					color: white;
+				}
+			}
+		}
+		@media screen and (max-width: $extraSmall) {
+			@include Flexcenter(center, column, center);
+			position: absolute;
+			background: white;
+			left: 0;
+			top: 0;
+			min-height: 100vh;
+			nav ul {
+				margin: 25px;
+				@include Flexcenter(center, column, flex-start);
+			}
+			nav ul > li a {
+				color: black;
 			}
 		}
 	}
+
 	hr {
 		border: 1px solid #f7f7f7a3;
 		width: 85%;

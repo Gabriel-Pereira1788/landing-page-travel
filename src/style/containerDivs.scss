@@ -29,6 +29,14 @@
 			p {
 				width: 36%;
 			}
+			@media screen and(max-width:$small){
+				@include Flexcenter(space-between, column, center);
+				height: 20em;
+				p{
+					width:100%;
+					padding:0px 23px;
+				}
+			}
 		}
 		.carousel-imgs {
 			width: 100%;
@@ -40,6 +48,7 @@
 				overflow-x: hidden;
 				scroll-behavior: smooth;
 				.img-travel {
+					border-radius:5px;
 					position: relative;
 					margin: 10px;
 					min-width: 290px;
@@ -101,7 +110,7 @@
 		}
 	}
 	.container-blog {
-		margin-top: 5%;
+		margin-top: 50px;
 		width: 100%;
 		padding: 0px 15px;
 		@include Flexcenter(space-evenly, column, center);

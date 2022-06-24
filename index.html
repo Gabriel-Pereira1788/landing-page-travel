@@ -19,17 +19,24 @@
 	<body>
 		<section class="header-section" id="home">
 			<header>
-				<h3>logo</h3>
-				<nav>
-					<ul>
-						<li><a href="#home">home</a></li>
-						<li><a href="#aboutUs">about us</a></li>
-						<li><a href="#tripPlaner"> trip planer</a></li>
-						<li><a href="#blog"> blog</a></li>
-						<li><a href="#categories">categories</a></li>
-						<li><a href="#contact">contact</a></li>
-					</ul>
-				</nav>
+				<button class="menu-icon btn-menu"><i class="fa-solid fa-bars"></i></button>
+				<div class="container-navigation navigation-off">
+					<button class="exit-menu btn-menu"><i class="fa-solid fa-x"></i></button>
+					<nav>
+						<ul>
+							<li><a href="#home">home</a></li>
+							<li><a href="#aboutUs">about us</a></li>
+							<li><a href="#tripPlaner"> trip planer</a></li>
+							<li><a href="#blog"> blog</a></li>
+							<li><a href="#categories">categories</a></li>
+							<li><a href="#contact">contact</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="logo">
+					<img src="./src/images/logo.png" alt="">
+				</div>
 			</header>
 			<hr />
 			<main>
@@ -189,7 +196,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="blog" class="container container-blog">
+				<div id="blog" class="container container-blog hidden-section">
 					<h1>Read our awesome blog post for everyone</h1>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -277,31 +284,103 @@
 						<img
 							src="./src/images/imagesTravel/Gulmarg.jpg"
 							alt=""
+							class="image-top"
 						/>
 					</div>
-					<div id="img-2">
+					<div id="container-moving">
 						<img
-							src="./src/images/imagesTravel/RomeItaly.jpg"
+							src="./src/images/imagesCategories/pexels-roman-odintsov-4553618.jpg"
 							alt=""
+							class="image-top"
 						/>
 						<img
-							src="./src/images/imagesTravel/RomeItaly.jpg"
+							src="./src/images/imagesCategories/pexels-grafixartphoto-samir-belhamra-4254555.jpg"
 							alt=""
+							class="image-bottom"
 						/>
 					</div>
 
 					<div id="img-3">
 						<img
-							src="./src/images/imagesTravel/RomeItaly.jpg"
+							src="./src/images/imagesCategories/pexels-taryn-elliott-3889742.jpg"
 							alt=""
+							class="image-top"
 						/>
 						<img
-							src="./src/images/imagesTravel/RomeItaly.jpg"
+							src="./src/images/imagesCategories/pexels-spencer-davis-4388167.jpg"
 							alt=""
+							class="image-bottom"
 						/>
 					</div>
 				</div>
 			</section>
+			<footer class="contact-us" id="contact">
+				<main>
+					<div class="say-hello">
+						<h2>Say hello to us</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing
+							elit.
+						</p>
+						<div>
+							<input
+								type="email"
+								id="email"
+								placeholder="email"
+							/>
+							<button>subscribe</button>
+							<hr />
+						</div>
+					</div>
+					<section class="container-links">
+						<div class="info-enterprise">
+							<h2>Logo</h2>
+							<p>
+								Would you like a free consultation? Perhaps your
+								existing.<br />
+								Call us today at <span>1-888-681-4388</span>
+							</p>
+						</div>
+						<div id="quick-links" class="links">
+							<h3>Quick Links</h3>
+							<nav>
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">Tours</a></li>
+									<li><a href="#">Calendar</a></li>
+									<li><a href="#">Private Tour</a></li>
+									<li><a href="#">Faq</a></li>
+									<li><a href="#">Concat</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div id="resource" class="links">
+							<h3>Resource</h3>
+							<nav>
+								<ul>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Development</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">Term & condition</a></li>
+									<li><a href="#">Safey & security</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="links">
+							<h3>Categories</h3>
+							<nav>
+								<ul>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Development</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">Term & condition</a></li>
+									<li><a href="#">Safey & security</a></li>
+								</ul>
+							</nav>
+						</div>
+					</section>
+				</main>
+			</footer>
 		</main>
 
 		<script type="module" src="./src/js/index.js"></script>

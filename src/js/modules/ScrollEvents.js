@@ -1,5 +1,6 @@
 import elements from "../App.js";
-const { containerTitle, containerSocialMedias } = elements;
+import {elementSelected} from '../utils/elementSelected.js'
+const { containerTitle, containerSocialMedias, containerImages, imgTravel } = elements;
 const headerSection = document.querySelector(".header-section");
 const header = headerSection.querySelector("header");
 const mainHeader = headerSection.querySelector("main");
@@ -40,6 +41,7 @@ const elementsAnimations = {
 const loadContent = (entries) => {
 	Array.from(entries).forEach((entrie) => {
 		const element = entrie.target;
+
 		if (entrie.intersectionRatio >= 0.5) {
 			element.classList.remove("hidden-section");
 			element.classList.add("hidden-off");
@@ -60,3 +62,17 @@ Array.from(document.querySelectorAll(".container")).forEach((element) =>
 
 window.addEventListener("scroll", scrolledDisplay);
 links.forEach((link) => link.addEventListener("click", scrolledClick));
+
+
+
+imgTravel.forEach((img) =>
+	img.addEventListener("click", (e) => {
+		e.preventDefault();
+		const element = e.currentTarget;
+		const positionContainer =
+			containerImages.offsetWidth / 2 - element.offsetWidth / 2;
+		const elementPosition = element.offsetLeft - positionContainer;
+		containerImages.scrollTo(elementPosition, 0);
+		elementSelected(imgTravel, img, "selected");
+	})
+);

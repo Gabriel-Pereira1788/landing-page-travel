@@ -25,16 +25,29 @@
 			width:100%;
 			margin:10px;
 			position:relative;
+
 			img {
+				position:relative;
+				border-radius: 5px;
 				object-fit: cover;
-				height: 28rem;
+				height: 36rem;
 				margin:10px;
 				width: 100%;
-
+				transition: all 0.3s;
+				@media screen and (min-width:$bigger){
+					height:63rem;
+					width:95%
+				}
+			}
+			.image-top{
+				animation:movingToTop 2s ease-in-out alternate infinite ;
+			}
+			.image-bottom{
+				animation:movingToBottom 2s ease-in-out alternate infinite ;
 			}
 
 		}
-		#img-2{
+		#container-moving{
 				top:250px;
 			}
 			
