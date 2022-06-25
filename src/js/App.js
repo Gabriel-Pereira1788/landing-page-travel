@@ -6,7 +6,7 @@ const contentMain = document.querySelector(".container-main");
 const containerImages = document.querySelector(".container-imgs");
 const imgTravel = containerImages.querySelectorAll(".img-travel");
 
-const urlData = "../src/resourceData/Data.json";
+const urlData = "./src/resourceData/Data.json";
 const comments = document.querySelectorAll(".comment");
 
 const getData = async (fn) => {
