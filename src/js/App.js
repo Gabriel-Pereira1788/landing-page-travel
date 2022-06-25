@@ -1,4 +1,4 @@
-import {elementSelected} from './utils/elementSelected.js'
+import { elementSelected } from "./utils/elementSelected.js";
 
 const containerTitle = document.querySelector(".container-headers");
 const containerSocialMedias = document.querySelector(".social-medias");
@@ -9,12 +9,18 @@ const imgTravel = containerImages.querySelectorAll(".img-travel");
 const urlData = "../../src/data/Data.json";
 const comments = document.querySelectorAll(".comment");
 
-
-const getData = (fn) => {
-	fetch(urlData)
-		.then((res) => res.json())
-		.then((data) => fn(data))
-		.catch((err) => console.log(err));
+const getData = async (fn) => {
+	try {
+		const response = fetch(urlData);
+		const data = response.json();
+		fn(data);
+		if(!response.ok){
+			throw new Error('Erro encontrado')
+			
+		}
+	} catch (err) {
+		console.log(err);
+	}
 };
 
 const renderImagesTravel = ({ imagesTravel }) => {
@@ -33,8 +39,6 @@ window.addEventListener("load", () => {
 	getData(renderImagesTravel);
 });
 
-
-
 const handlerComment = (e) => {
 	const element = e.currentTarget;
 	elementSelected(comments, element, "comment-select");
@@ -51,9 +55,9 @@ comments.forEach((comment) =>
 );
 
 const menuIcon = document.querySelector(".menu-icon");
-const exitMenu = document.querySelector('.exit-menu')
+const exitMenu = document.querySelector(".exit-menu");
 menuIcon.addEventListener("click", displayToggle);
-exitMenu.addEventListener('click',displayToggle)
+exitMenu.addEventListener("click", displayToggle);
 
 export default {
 	containerSocialMedias,
