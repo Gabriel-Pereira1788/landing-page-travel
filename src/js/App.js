@@ -1,11 +1,8 @@
-import { elementSelected } from "./utils/elementSelected.js";
-
 const containerTitle = document.querySelector(".container-headers");
 const containerSocialMedias = document.querySelector(".social-medias");
 const contentMain = document.querySelector(".container-main");
 const containerImages = document.querySelector(".container-imgs");
 const imgTravel = containerImages.querySelectorAll(".img-travel");
-const comments = document.querySelectorAll(".comment");
 
 window.addEventListener("load", () => {
 	const sliderInitial = 916;
@@ -14,19 +11,10 @@ window.addEventListener("load", () => {
 	containerImages.scrollTo(sliderInitial, 0);
 });
 
-const handlerComment = (e) => {
-	const element = e.currentTarget;
-	elementSelected(comments, element, "comment-select");
-};
-
 const displayToggle = () => {
 	const navigation = document.querySelector(".container-navigation");
 	navigation.classList.toggle("navigation-off");
 };
-
-comments.forEach((comment) =>
-	comment.addEventListener("click", handlerComment)
-);
 
 const menuIcon = document.querySelector(".menu-icon");
 const exitMenu = document.querySelector(".exit-menu");
