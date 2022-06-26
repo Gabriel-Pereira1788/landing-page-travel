@@ -39,6 +39,7 @@ button {
 .hidden-section {
 	opacity: 0;
 }
+
 a {
 	text-transform: capitalize;
 	text-decoration: none;
@@ -65,4 +66,17 @@ p {
 }
 img{
 	border-radius:5px;
+}
+
+::-webkit-scrollbar{
+	width:6px;
+}
+
+::-webkit-scrollbar-track{
+	border-radius:4px;
+}
+
+::-webkit-scrollbar-thumb{
+	background:$primaryColor;
+	border-radius:10px;
 }

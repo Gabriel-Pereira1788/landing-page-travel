@@ -901,6 +901,8 @@
           text-align: center; }
         #contact main .container-links .links a {
           color: #b5b5b5; }
+          #contact main .container-links .links a:hover {
+            color: green; }
       @media screen and (max-width: 600px) {
         #contact main .container-links {
           display: flex;
@@ -982,5 +984,15 @@ p {
 
 img {
   border-radius: 5px; }
+
+::-webkit-scrollbar {
+  width: 6px; }
+
+::-webkit-scrollbar-track {
+  border-radius: 4px; }
+
+::-webkit-scrollbar-thumb {
+  background: green;
+  border-radius: 10px; }
 
 /*# sourceMappingURL=style.css.map */

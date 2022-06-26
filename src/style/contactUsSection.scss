@@ -53,6 +53,9 @@
 			}
 			a{
 				color:$SecondaryTextColor;
+				&:hover{
+					color:$primaryColor;
+				}
 			}
 		}
 		@media screen and (max-width:$small){
