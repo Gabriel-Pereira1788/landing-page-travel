@@ -33,8 +33,7 @@
 			cursor: pointer;
 		}
 		.logo {
-			width: 200px;
-			display: flex;
+			width:clamp(130px, 25vw, 210px);
 			img {
 				height: 2rem;
 				width: 100%;
@@ -117,12 +116,16 @@
 			}
 		}
 	}
-
-	hr {
-		border: 1px solid #f7f7f7a3;
-		width: 85%;
-		margin: 10px 0px;
+	.division {
+		width: 100%;
+		@include Flexcenter(center, row, center);
+		hr {
+			border: 1px solid #f7f7f7a3;
+			width: 85%;
+			margin: 10px 0px;
+		}
 	}
+
 	main {
 		@include Flexcenter(flex-start, row, center);
 		color: white;
