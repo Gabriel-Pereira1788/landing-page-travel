@@ -50,5 +50,23 @@
 			"seasons": "Summer",
 			"src": "https://dsdsuzy1jtjfw.cloudfront.net/wp-content/uploads/2021/06/Ilha-de-Olhuveli-Maldivas-shutterstock_1383503633.jpg"
 		}
+	],
+	"comments": [
+		{
+			"date": { "month": 3, "day": 28, "age": 2018 },
+			"comment": "We provide best tour guide for our most valuable clients that world."
+		},
+		{
+			"date": { "month": 4, "day": 18, "age": 2018 },
+			"comment": "We provide best tour guide for our most valuable clients that world."
+		},
+		{
+			"date": { "month": 5, "day": 8, "age": 2018 },
+			"comment": "It is a long established fact that a rea."
+		},
+		{
+			"date": { "month": 5, "day": 8, "age": 2018 },
+			"comment": "Esse enim nisi eris non potes Estne,quaeso inquam sitient in."
+		}
 	]
 }

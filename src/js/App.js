@@ -5,38 +5,13 @@ const containerSocialMedias = document.querySelector(".social-medias");
 const contentMain = document.querySelector(".container-main");
 const containerImages = document.querySelector(".container-imgs");
 const imgTravel = containerImages.querySelectorAll(".img-travel");
-
-const urlData = "./src/resourceData/Data.json";
 const comments = document.querySelectorAll(".comment");
-
-const getData = async (fn) => {
-	try {
-		const response = await fetch(urlData);
-		const data = await response.json();
-		fn(data)
-		if(!response.ok){
-			throw new Error('Erro encontrado')
-
-		}
-	} catch (err) {
-		console.log(err);
-	}
-};
-
-const renderImagesTravel = ({ imagesTravel }) => {
-	imgTravel.forEach((img, index) => {
-		img.style.backgroundImage = `url(${imagesTravel[index].src})`;
-		img.querySelector(".location").textContent = imagesTravel[index].name;
-		img.querySelector(".seasons").textContent = imagesTravel[index].seasons;
-	});
-};
 
 window.addEventListener("load", () => {
 	const sliderInitial = 916;
 	containerTitle.classList.add("hidden-off");
 	containerSocialMedias.classList.add("translateAnimationX");
 	containerImages.scrollTo(sliderInitial, 0);
-	getData(renderImagesTravel);
 });
 
 const handlerComment = (e) => {
@@ -47,7 +22,6 @@ const handlerComment = (e) => {
 const displayToggle = () => {
 	const navigation = document.querySelector(".container-navigation");
 	navigation.classList.toggle("navigation-off");
-	// navigation.classList.add("navigation-on");
 };
 
 comments.forEach((comment) =>

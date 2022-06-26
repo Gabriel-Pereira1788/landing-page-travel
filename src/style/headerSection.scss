@@ -62,14 +62,14 @@
 				text-align: center;
 				margin: 10px 33px;
 				width: 100%;
-				padding:0px 50px;
+				padding: 0px 82px;
 			}
 		}
 	}
 	.navigation-off {
 		transform: translateX(0%);
-		@media screen and(max-width:$extraSmall){
-		transform: translateX(-100%);
+		@media screen and(max-width:$extraSmall) {
+			transform: translateX(-100%);
 		}
 	}
 
@@ -105,9 +105,15 @@
 			nav ul {
 				margin: 25px;
 				@include Flexcenter(center, column, flex-start);
-			}
-			nav ul > li a {
-				color: black;
+				li {
+					border: none;
+					&:hover {
+						color: $primaryColor;
+					}
+					a {
+						color: black;
+					}
+				}
 			}
 		}
 	}
@@ -133,17 +139,11 @@
 			@include Flexcenter(space-evenly, column, center);
 
 			margin: 15px;
-			div {
+			a {
+				font-size: clamp(1em, 1.5vw, 2em);
+				margin: 20px;
 				.displayBigger {
 					display: none;
-				}
-				@media screen and(min-width:$bigger) {
-					.displayBigger {
-						display: block;
-					}
-					.displayNormal {
-						display: none;
-					}
 				}
 			}
 			i {
